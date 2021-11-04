@@ -3,10 +3,19 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Popup from "../Popup/Popup";
 // import CheckIcon from "@mui/icons-material/Check";
 
 function Main() {
   const [movies, setMovies] = useState(null);
+  const [butttonPopup, setButtonPopup] = useState(false);
+  const [timePopup, setTimePopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimePopup(true);
+    }, 3000);
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:8000/recommendations")
@@ -19,8 +28,7 @@ function Main() {
   }, []);
 
   return (
-    <section>
-      <h1>selected movies to watch</h1>
+    <Section>
       <Slider speed={500} slidesToShow={1} slidesToScroll={1} infinite={true}>
         {movies &&
           movies.map((movie) => (
@@ -30,7 +38,12 @@ function Main() {
               </Title>
               <Img src={movie.imageURL} alt="obrazek tytułowy" />
               <BtnsField>
-                <Button style={{ backgroundColor: "rgb(20,200,20)"}} onClick={()=> {}}>
+                <Button
+                  style={{ backgroundColor: "rgb(20,200,20)" }}
+                  onClick={() => {
+                    setButtonPopup(true);
+                  }}
+                >
                   <p>Accept</p>
                   {/* <CheckIcon /> */}
                 </Button>
@@ -41,15 +54,24 @@ function Main() {
             </Body>
           ))}
       </Slider>
-    </section>
+      <Popup trigger={butttonPopup} setTrigger={setButtonPopup}></Popup>
+      <Popup trigger={timePopup} setTrigger={setTimePopup}></Popup>
+    </Section>
   );
 }
 
 export default Main;
+const Section = styled.section`
+  min-width: 270px;
+`;
 
 const Body = styled.div`
   height: 97vh;
   text-align: center;
+
+  @media screen and (max-width: 450px) {
+    height: 50vh;
+  }
 `;
 const Title = styled.h1`
   margin-top: 2rem;
@@ -61,10 +83,14 @@ const Img = styled.img`
   border-radius: 0.3rem;
 `;
 const BtnsField = styled.div`
-  width: 40rem;
+  width: 38rem;
   display: flex;
   justify-content: space-between;
   margin: 2rem auto;
+
+  @media screen and (max-width: 450px) {
+    width: 25rem;
+  }
 `;
 const Button = styled.div`
   width: 10rem;
