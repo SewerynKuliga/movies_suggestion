@@ -15,6 +15,86 @@
             "title": "Star Wars: Episode VII - The Force Awakens",
             "summary": "Lorem ipsum....",
             "rating": 8.2
+        } , 
+        {
+            "id": "23g233c",
+            "imageURL":
+            "https://anakalianwhims.files.wordpress.com/2013/05/the-hunger-games.jpg",
+            "title": "The Hunger Games",
+            "summary": "Lorem ipsum....",
+            "rating": 7.2
+        } , 
+        {
+            "id": "26jd45c",
+            "imageURL":
+            "https://ecsmedia.pl/c/fast-furious-9-the-fast-saga-b-iext73877797.jpg",
+            "title": "The Fast and the Furious",
+            "summary": "Lorem ipsum....",
+            "rating": 7.5
+        } , 
+        {
+            "id": "235few3",
+            "imageURL":
+            "https://flxt.tmsimg.com/assets/p28828_p_v10_am.jpg",
+            "title": " The Lord of the Rings: The Fellowship of the Ring",
+            "summary": "Lorem ipsum....",
+            "rating": 9.9
+        } , 
+        {
+            "id": "2f1ab2c",
+            "imageURL":
+            "https://ostatniatawerna.pl/wp-content/uploads/2017/11/pirates-of-the-caribbean-the-curse-of-the-black-pearl.jpg",
+            "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+            "summary": "Lorem ipsum....",
+            "rating": 7.7
+        } , 
+        {
+            "id": "a1b23c4",
+            "imageURL":
+            "https://planetagracza.pl/wp-content/uploads/2021/10/film-dune-1216x684.jpg",
+            "title": "Dune",
+            "summary": "Lorem ipsum....",
+            "rating": 7.9
+        } , 
+        {
+            "id": "230dc1o",
+            "imageURL":
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4757/4757400_so.jpg",
+            "title": "Edward Scissorhands",
+            "summary": "Lorem ipsum....",
+            "rating": 7.7
+        } , 
+        {
+            "id": "2315iop",
+            "imageURL":
+            "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/61c838cec946788025e4549d23e0b9b52e16d701d87d2d821c95e498ec689c03._RI_V_TTW_.jpg",
+            "title": "Harry Potter and the Philosopher's Stone",
+            "summary": "Lorem ipsum....",
+            "rating": 8.9
+        } , 
+        {
+            "id": "2hyj145",
+            "imageURL":
+            "https://flxt.tmsimg.com/assets/p34417_p_v13_ai.jpg",
+            "title": "Man on Fire",
+            "summary": "Lorem ipsum....",
+            "rating": 7.9
+        } , 
+        {
+            "id": "2137abc",
+            "imageURL":
+            "https://eplakaty.pl/img/towary/1/2016_11/44119.jpg",
+            "title": "The Mechanic",
+            "summary": "Lorem ipsum....",
+            "rating": 7.1
+        } , 
+        {
+            "id": "m78k7t5",
+            "imageURL":
+            "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+            "title": "Titanic",
+            "summary": "Lorem ipsum....",
+            "rating": 7.3
         } 
     ]
 }

@@ -11,6 +11,8 @@
     "react-router": "^6.0.0",
     "react-router-dom": "^6.0.0",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
@@ -18,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api": "npx json-server --watch data/db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [
