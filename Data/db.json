@@ -3,7 +3,7 @@
     [
         {
             "id": "1and3011",
-            "imageURL": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
+            "imageURL": "https://cat5.pl/wp-content/uploads/2019/05/avengers1.jpg",
             "title": "Avengers Endgame",
             "summary": "Lorem ipsum....",
             "rating": 5.3
@@ -11,7 +11,7 @@
         {
             "id": "2301abc",
             "imageURL":
-            "https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg",
+            "https://lumiere-a.akamaihd.net/v1/images/swtfa-digital_900f3ac4.jpeg?region=0%2C0%2C645%2C1000",
             "title": "Star Wars: Episode VII - The Force Awakens",
             "summary": "Lorem ipsum....",
             "rating": 8.2

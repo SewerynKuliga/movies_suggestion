@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import CheckIcon from "@mui/icons-material/Check";
 
 function Main() {
   const [movies, setMovies] = useState(null);
@@ -13,13 +14,13 @@ function Main() {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setMovies(data);
       });
   }, []);
 
   return (
     <section>
+      <h1>selected movies to watch</h1>
       <Slider speed={500} slidesToShow={1} slidesToScroll={1} infinite={true}>
         {movies &&
           movies.map((movie) => (
@@ -29,8 +30,13 @@ function Main() {
               </Title>
               <Img src={movie.imageURL} alt="obrazek tytułowy" />
               <BtnsField>
-                <Button style={{backgroundColor: "rgb(10,198,21)"}}>Accept</Button>
-                <Button style={{backgroundColor: "rgb(215,2,2)"}}>Reject</Button>
+                <Button style={{ backgroundColor: "rgb(20,200,20)"}} onClick={()=> {}}>
+                  <p>Accept</p>
+                  {/* <CheckIcon /> */}
+                </Button>
+                <Button style={{ backgroundColor: "rgb(200,20,20)" }}>
+                  <p>Reject</p>
+                </Button>
               </BtnsField>
             </Body>
           ))}
@@ -67,9 +73,17 @@ const Button = styled.div`
   border-radius: 3rem;
   transition: 0.3s;
   cursor: pointer;
-  
-  &:hover{
-    border-radius: 1rem;
 
+  svg {
+    font-size: 2rem;
+    /* display: none; */
+  }
+
+  &:hover {
+    border-radius: 1rem;
+  }
+
+  &:focus p {
+    font-size: 10rem;
   }
 `;
