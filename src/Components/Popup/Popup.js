@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 function Popup(props) {
+  const trigger = props.trigger;
+  useEffect(() => {
+    if (trigger === true) {
+      setTimeout(() => {
+        props.setTrigger(false);
+      }, 1000);
+    }
+  }, [trigger]);
+
   return props.trigger ? (
-    <Body onClick={()=> {props.setTrigger(false)}}>
+    <Body
+      onClick={() => {
+        props.setTrigger(false);
+      }}
+    >
       {" "}
       <p>Added to library</p>
-      {/* <CloseBtn>Close</CloseBtn> */}
       {props.children}
     </Body>
   ) : (
@@ -27,16 +39,22 @@ const Body = styled.div`
   height: auto;
   justify-content: center;
   text-align: center;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 0 auto;
 
   border: 2px solid green;
   border-radius: 2rem;
-  transition: 0.1s;
-  z-index: 5;
+  transition: 1s;
   p {
-      font-size: 2.4rem;
-      color: green;
+    font-size: 2.4rem;
+    color: green;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 12rem;
+    p {
+      font-size: 1.8rem;
+    }
   }
 `;
 

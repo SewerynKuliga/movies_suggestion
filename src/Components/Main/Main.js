@@ -9,13 +9,19 @@ import Popup from "../Popup/Popup";
 function Main() {
   const [movies, setMovies] = useState(null);
   const [butttonPopup, setButtonPopup] = useState(false);
-  const [timePopup, setTimePopup] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTimePopup(true);
-    }, 3000);
-  }, []);
+  const openPopup = () => {
+    setButtonPopup(true);
+  };
+
+  // useEffect(() => {
+  //   if (butttonPopup === true) {
+  //     setTimeout(() => {
+  //       setButtonPopup(false);
+  //     }, 1000);
+  //   }
+  // }, [butttonPopup]);
+
 
   useEffect(() => {
     fetch("http://localhost:8000/recommendations")
@@ -40,9 +46,7 @@ function Main() {
               <BtnsField>
                 <Button
                   style={{ backgroundColor: "rgb(20,200,20)" }}
-                  onClick={() => {
-                    setButtonPopup(true);
-                  }}
+                  onClick={openPopup}
                 >
                   <p>Accept</p>
                   {/* <CheckIcon /> */}
@@ -55,7 +59,6 @@ function Main() {
           ))}
       </Slider>
       <Popup trigger={butttonPopup} setTrigger={setButtonPopup}></Popup>
-      <Popup trigger={timePopup} setTrigger={setTimePopup}></Popup>
     </Section>
   );
 }
