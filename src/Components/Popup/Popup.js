@@ -1,16 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 function Popup(props) {
-  const trigger = props.trigger;
-  useEffect(() => {
-    if (trigger === true) {
-      setTimeout(() => {
-        props.setTrigger(false);
-      }, 1000);
-    }
-  }, [trigger]);
-
   return props.trigger ? (
     <Body
       onClick={() => {

@@ -14,13 +14,13 @@ function Main() {
     setButtonPopup(true);
   };
 
-  // useEffect(() => {
-  //   if (butttonPopup === true) {
-  //     setTimeout(() => {
-  //       setButtonPopup(false);
-  //     }, 1000);
-  //   }
-  // }, [butttonPopup]);
+  useEffect(() => {
+    if (butttonPopup === true) {
+      setTimeout(() => {
+        setButtonPopup(false);
+      }, 1000);
+    }
+  }, [butttonPopup]);
 
 
   useEffect(() => {
@@ -49,7 +49,6 @@ function Main() {
                   onClick={openPopup}
                 >
                   <p>Accept</p>
-                  {/* <CheckIcon /> */}
                 </Button>
                 <Button style={{ backgroundColor: "rgb(200,20,20)" }}>
                   <p>Reject</p>
