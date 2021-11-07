@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Popup from "../Popup/Popup";
-// import CheckIcon from "@mui/icons-material/Check";
 
 function Main() {
   const [movies, setMovies] = useState(null);
@@ -22,7 +21,6 @@ function Main() {
     }
   }, [butttonPopup]);
 
-
   useEffect(() => {
     fetch("http://localhost:8000/recommendations")
       .then((res) => {
@@ -30,6 +28,7 @@ function Main() {
       })
       .then((data) => {
         setMovies(data);
+        console.log(data)
       });
   }, []);
 
